@@ -1,19 +1,20 @@
 import React from "react";
-import Header from "./Header";
 import allCountryScores from "./Scores";
-import DisplayPlayerScore from "./DisplayScoreTable";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <div className="OuterBorder">
-        <h1>High Scores Pre Country</h1>
-        <div className="container">
-          <Header results={allCountryScores}/>
-          <DisplayPlayerScore results={allCountryScores}/>
-        </div> 
-      </div>  
+      <h1>High Score Pre Country</h1>
+      <ul>
+        {allCountryScores.map( (element, index) => {
+          return (
+            <li className="list-item" key={index}>
+              <h2>HI SCORES: {element.name}</h2>
+            </li>
+          )
+        })}
+      </ul>
     </div>
   );
 };
