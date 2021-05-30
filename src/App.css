@@ -1,3 +1,7 @@
+body {
+  text-align: center;
+}
+
 .App {
   max-width: 500px;
   text-align: center;
@@ -10,4 +14,36 @@
   border: solid 20px rgba(134, 199, 4, 0.9);
   list-style: none;
   margin: 1em;
+  padding: 1em;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.table {
+  border: solid 2px black;
+  width: 300px;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+.table-row {
+  border-bottom: solid 2px black;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.player-name {
+  text-transform: uppercase;
+}
+
+.player-score {
+  font-weight: 900;
+  color: red;
 }
