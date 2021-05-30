@@ -1,7 +1,7 @@
 import React from "react";
 import allCountryScores from "./Scores";
 
-function CountryName () {
+function PlayerRatings () {
     return (
         <div>
             <ul>
@@ -11,14 +11,12 @@ function CountryName () {
                         <li className="list-item" key={index}>
                             <h2>{element.name}</h2>
                             <table className="table">
-                                <thead>
-                                    <th scope="col"></th>
-                                </thead>
                                 <tbody>
                                 {element.scores.sort((a, b) => b.s - a.s)
                                     .map((player) => {
                                         return (
-                                            <tr scope="row" key={player.s} className="table-row">
+                                            <tr key={player.s} className="table-row">
+                                                <th scope="row"></th>
                                                 <td className="player-name">{player.n}</td>
                                                 <td className="player-score">{player.s}</td>
                                             </tr>
@@ -34,4 +32,4 @@ function CountryName () {
     )
 }
 
-export default CountryName;
+export default PlayerRatings;

@@ -1,12 +1,12 @@
 import React from "react";
-import CountryName from "./CountryName";
+import PlayerRatings from "./PlayerRatings";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <h1>High Score Pre Country</h1>
-      <CountryName />
+      <PlayerRatings />
     </div>
   );
 };
