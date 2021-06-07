@@ -1,11 +1,11 @@
 import React from "react";
-import allCountryScores from "./Scores";
 
-function PlayerRatings () {
+function PlayerRatings (props) {
+
     return (
         <div>
             <ul>
-                {allCountryScores.sort((a, b) => (a.name < b.name ? -1 : 1))
+                {props.results.sort((a, b) => (a.name < b.name ? -1 : 1))
                 .map ((element, index) => {
                     return (
                         <li className="list-item" key={index}>
@@ -28,6 +28,7 @@ function PlayerRatings () {
                     )
                 })}
             </ul>
+            
         </div>
     )
 }
