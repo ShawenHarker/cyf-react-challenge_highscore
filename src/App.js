@@ -1,13 +1,15 @@
 import React from "react";
 import allCountryScores from "./Scores";
-import PlayerRatings from "./PlayerRatings";
+import ListCountryNames from "./ListCountryName";
+import ToggleScore from "./ListCountryName";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <h1>High Score Pre Country</h1>
-      <PlayerRatings results={allCountryScores}/>
+      <button className="btn" onClick={ToggleScore}>Toggle Button</button>
+      <ListCountryNames results={allCountryScores}/>
     </div>
   );
 };
